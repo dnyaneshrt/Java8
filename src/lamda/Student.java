@@ -1,0 +1,45 @@
+package lamda;
+
+//Sort the Collection of Students in Descending order based on their last names.
+//student will have 2 properties.. firstName, lastName.
+public class Student implements Comparable<Student>{
+    private String firstname;
+    private String lastname;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
+    }
+
+    public Student(String firstname, String lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+   @Override
+    public int compareTo(Student o) {
+        return this.firstname.compareTo(o.getFirstname());
+    }
+
+
+
+}
